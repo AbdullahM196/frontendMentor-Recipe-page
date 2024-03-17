@@ -43,7 +43,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url("./image-omelette.jpeg");
+  background-image: url("../image-omelette.jpeg");
 }
 .main__title {
   font-family: var(--fontFamilyHeader);
