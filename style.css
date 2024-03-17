@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+:root {
+  --mobileSize: 375px;
+  --desktopSize: 1440px;
+  --Nutmeg: hsl(14, 45%, 36%);
+  --DarkRaspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  --RoseWhite: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --LightGrey: hsl(30, 18%, 87%);
+  --WengeBrown: hsl(30, 10%, 34%);
+  --DarkCharcoal: hsl(24, 5%, 18%);
+  --bodyFontSize: 21px;
+  --fontFamilyHeader: "Young Serif", serif;
+  --fontHeaderWeight: 400;
+  --headerFontSize: 32px;
+  --fontFamilyBody: "Outfit", serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontFamilyBody);
+  font-size: var(--bodyFontSize);
+  font-weight: 600;
+}
+#app {
+  max-width: var(--desktopSize);
+  margin: 0 auto;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px 41px 50px;
+  gap: 45px;
+}
+.img {
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("./image-omelette.jpeg");
+}
+.main__title {
+  font-family: var(--fontFamilyHeader);
+  font-size: 40px;
+  font-weight: var(--fontHeaderWeight);
+}
+.main__text {
+  color: var(--WengeBrown);
+  line-height: 1.5;
+  letter-spacing: 1px;
+  max-width: 72ch;
+}
+.main__preparationTime {
+  padding: 45px;
+  border-radius: 12px;
+  background-color: var(--RoseWhite);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  h2 {
+    font-family: var(--fontFamilyHeader);
+    font-size: var(--headerFontSize);
+    font-weight: var(--fontHeaderWeight);
+    color: var(--DarkRaspberry);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 31px);
+    margin-left: auto;
+    li {
+      font-size: var(--bodyFontSize);
+      color: var(--WengeBrown);
+      padding-left: 31px;
+      box-sizing: border-box !important;
+    }
+    li::marker {
+      color: var(--DarkRaspberry);
+    }
+  }
+}
+.main__ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  h2 {
+    font-size: var(--headerFontSize);
+    font-weight: var(--fontHeaderWeight);
+    font-family: var(--fontFamilyHeader);
+
+    color: var(--Nutmeg);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 31px);
+    margin-left: auto;
+    list-style-type: square;
+    li {
+      font-size: var(--bodyFontSize);
+      line-height: 1.6;
+      color: var(--WengeBrown);
+      padding-left: 31px;
+      font-weight: 400;
+    }
+    li::marker {
+      color: var(--Nutmeg);
+    }
+  }
+}
+hr {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: var(--Eggshell);
+  opacity: 0.5;
+}
+.main__instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  h2 {
+    font-size: var(--headerFontSize);
+    font-weight: var(--fontHeaderWeight);
+    font-family: var(--fontFamilyHeader);
+
+    color: var(--Nutmeg);
+  }
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 31px);
+    line-height: 1.5;
+    margin-left: auto;
+    li {
+      font-size: var(--bodyFontSize);
+      color: var(--WengeBrown);
+      padding-left: 31px;
+      font-weight: 400;
+      max-width: 82ch;
+      letter-spacing: 1px;
+    }
+
+    li::marker {
+      color: var(--Nutmeg);
+      font-weight: 700;
+    }
+  }
+}
+.main__nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  h2 {
+    font-size: var(--headerFontSize);
+    font-weight: var(--fontHeaderWeight);
+    font-family: var(--fontFamilyHeader);
+    color: var(--Nutmeg);
+  }
+  p {
+    font-size: var(--bodyFontSize);
+    color: var(--WengeBrown);
+  }
+  table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    tr {
+      display: flex;
+      gap: 10px;
+      border-bottom: 1px solid var(--LightGrey);
+      padding: 10px;
+    }
+    th {
+      padding-left: 30px;
+      text-align: start;
+      flex: 1;
+      color: var(--WengeBrown);
+    }
+    td {
+      text-align: start;
+      flex: 1;
+      color: var(--Nutmeg);
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main {
+    padding: 0;
+    .img {
+      border-radius: 0;
+    }
+    .main__title,
+    .main__text,
+    .main__preparationTime,
+    .main__ingredients,
+    .main__instructions,
+    .main__nutrition {
+      padding: 12px 24px;
+    }
+  }
+}
